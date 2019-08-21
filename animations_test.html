@@ -1,0 +1,151 @@
+<style>
+
+body {
+	margin: 100px 20%;
+}
+
+.container1 {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	margin-right: 5px;
+}
+
+.animation{
+	width: 50px;
+	height: 50px;
+/*	background-color: yellow;*/
+	animation-delay: 1s;
+	animation-iteration-count:infinite;
+	animation-timing-function: linear;
+}
+
+.animation__time--3s {
+	animation-duration: 3s;
+}
+
+.animation__time--5s {
+	animation-duration: 5s;
+}
+
+.animation__name--pendulum {
+	animation-name: pendulum;
+}
+
+.animation__name--invisible {
+	animation-name: invisible;
+}
+
+.animation__name--circle {
+	animation-name: circle;
+}
+
+@keyframes pendulum {
+	0% {
+		transform: scale(1.0) rotate(0deg);
+		background-color: yellow;
+	}
+
+	25% {
+		transform: scale(1.2) rotate(90deg);
+		background-color: green;
+	}
+	
+	50%{
+		transform: scale(1.4) rotate(180deg);
+		background-color: red;
+	}
+  
+	75% {
+		transform: scale(1.2) rotate(270deg);
+		background-color: green;
+	}
+  
+	100% {
+		transform: scale(1.0) rotate(360deg);
+		background-color: yellow;
+	}
+}
+
+@keyframes invisible {
+	0% {
+		opacity: 1;
+		background-color: yellow;
+	}
+
+	25% {
+		opacity: 0.5;
+		background-color: green;
+	}
+	
+	50%{
+		opacity: 0;
+		<!-- background-color: red; -->
+	}
+  
+	75% {
+		opacity: 0.5;
+		background-color: green;
+	}
+  
+	100% {
+		opacity: 1;
+		background-color: yellow;
+	}
+}
+
+@keyframes circle {
+	0% {
+		border-radius: 0px;
+		background-color: red;
+	}
+
+	25% {
+		border-radius: 10px;
+		background-color: yellow;
+	}
+	
+	50%{
+	border-radius: 30px;
+	background-color: green;
+	}
+  
+	75% {
+		border-radius: 10px;
+		background-color: yellow;
+	}
+  
+	100% {
+		border-radius: 0px;
+		background-color: red;
+	}
+}
+
+</style>
+
+<html>
+
+<head>
+</head>
+
+<body>
+
+<div class="container1">
+	<div class="animation animation__name--pendulum animation__time--3s"></div>
+</div>
+
+<div class="container1">
+	<div class="animation animation__name--invisible animation__time--5s"></div>
+</div>
+
+<div class="container1">
+	<div class="animation animation__name--circle animation__time--5s"></div>
+</div>
+
+</body>
+
+</html>
