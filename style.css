@@ -1,5 +1,3 @@
-<style>
-
 body {
 	margin: 100px 20%;
 }
@@ -18,7 +16,6 @@ body {
 .animation {
 	width: 50px;
 	height: 50px;
-/*	background-color: yellow;*/
 	animation-delay: 1s;
 	animation-iteration-count:infinite;
 	animation-timing-function: linear;
@@ -84,7 +81,6 @@ body {
 	
 	50%{
 		opacity: 0;
-		/* background-color: red; */
 	}
   
 	75% {
@@ -124,28 +120,3 @@ body {
 		background-color: red;
 	}
 }
-
-</style>
-
-<html>
-
-<head>
-</head>
-
-<body>
-
-<div class="container1">
-	<div class="animation animation__name--pendulum animation__time--3s"></div>
-</div>
-
-<div class="container1">
-	<div class="animation animation__name--invisible animation__time--5s"></div>
-</div>
-
-<div class="container1">
-	<div class="animation animation__name--circle animation__time--5s"></div>
-</div>
-
-</body>
-
-</html>
